@@ -67,15 +67,14 @@ public class TripsController : ControllerBase
         var existingClient = await _context.Clients.FirstOrDefaultAsync(c => c.Pesel == request.Pesel);
         if (existingClient != null)
         {
-            //not needed start
-            var existingClientTrip = await _context.ClientTrips
+            //not needed
+            /*var existingClientTrip = await _context.ClientTrips
                 .FirstOrDefaultAsync(ct => ct.IdClient == existingClient.IdClient && ct.IdTrip == idTrip);
 
             if (existingClientTrip != null)
             {
                 return BadRequest("Client is already assigned to this trip");
-            }
-            //not needed end
+            }*/
             
             return BadRequest("Client with the given PESEL already exists");
         }

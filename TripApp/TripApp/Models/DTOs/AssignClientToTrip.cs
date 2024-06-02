@@ -7,9 +7,5 @@ public class AssignClientToTrip
     public string Email { get; set; } = null!;
     public string Telephone { get; set; } = null!;
     public string Pesel { get; set; } = null!;
-    
-    //IdTrip?
-    
-    //TripName?
     public DateTime? PaymentDate { get; set; }
 }
